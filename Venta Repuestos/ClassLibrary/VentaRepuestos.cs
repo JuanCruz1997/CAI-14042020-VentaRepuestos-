@@ -45,25 +45,25 @@ namespace ClassLibrary
         {
 
         }
-        public void QuitarRepuesto(int n)
+        public void QuitarRepuesto(int codigo)
         {
 
         }
-        public void ModificarRepuesto(int codigo, double precio)
+        public void ModificarRepuesto(int codigo, double precioNuevo)
         {
 
         }
-        public void AgregarStock(int codigo, int cantidad)
+        public void AgregarStock(int codigo, int cantidadASumar)
         {
 
         }
-        public void QuitarStock(int m, int n)
+        public void QuitarStock(int codigo, int cantidadAQuitar)
         {
 
         }
-        public List<Repuesto> TraerPorCategoria(int n)
+        public List<Repuesto> TraerPorCategoria(int codCategoria)
         {
-
+            throw new NotImplementedException();
         }
     }
 }
