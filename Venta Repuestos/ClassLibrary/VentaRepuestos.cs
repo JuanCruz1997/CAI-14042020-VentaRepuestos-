@@ -11,6 +11,11 @@ namespace ClassLibrary
         private List<Repuesto> _listaProductos = new List<Repuesto>();
         private string _nombreComercio = "";
         private string _direccion = "";
+        public VentaRepuestos(string nombre, string direccion)
+        {
+            this._nombreComercio = nombre;
+            this._direccion = direccion;
+        }
         public List<Repuesto> ListaProductos
         {
             get
@@ -41,29 +46,80 @@ namespace ClassLibrary
             }
         }
 
-        public void AgregarRepuesto(Repuesto r)
+        public void AgregarRepuesto(Repuesto rep)
         {
-
+            foreach(Repuesto r in _listaProductos)
+            {
+                if (r.Codigo == rep.Codigo)
+                {
+                    throw new Exception("El repuesto ingresado ya existe.");
+                }
+            }
+            _listaProductos.Add(rep);
         }
         public void QuitarRepuesto(int codigo)
         {
-
+            bool existe = false;
+            foreach (Repuesto r in _listaProductos)
+            {
+                if (r.Codigo == codigo)
+                {
+                    _listaProductos.Remove(r);
+                    existe = true;
+                }
+            }
+            if (!existe)
+            {
+                throw new Exception("El repuesto indicado no existe.");
+            }
         }
         public void ModificarRepuesto(int codigo, double precioNuevo)
         {
-
+            bool existe = false;
+            foreach (Repuesto r in _listaProductos)
+            {
+                if (r.Codigo == codigo)
+                {
+                    r.Precio = precioNuevo;
+                    existe = true;
+                }
+            }
+            if (!existe)
+            {
+                throw new Exception("El repuesto indicado no existe.");
+            }
         }
         public void AgregarStock(int codigo, int cantidadASumar)
         {
-
+            foreach(Repuesto r in _listaProductos)
+            {
+                if (r.Codigo == codigo)
+                {
+                    r.Stock = r.Stock + cantidadASumar;
+                }
+            }
         }
         public void QuitarStock(int codigo, int cantidadAQuitar)
         {
-
+            foreach (Repuesto r in _listaProductos)
+            {
+                if (r.Codigo == codigo)
+                {
+                    r.Stock = r.Stock - cantidadAQuitar;
+                }
+            }
         }
         public List<Repuesto> TraerPorCategoria(int codCategoria)
         {
-            throw new NotImplementedException();
+            List<Repuesto> lista = new List<Repuesto>();
+            foreach(Repuesto r in _listaProductos)
+            {
+                if (r.Categoria.Codigo == codCategoria)
+                {
+                    lista.Add(r);
+                }
+            }
+            return lista;
         }
     }
 }

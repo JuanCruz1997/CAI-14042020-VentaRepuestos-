@@ -1,0 +1,6 @@
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\ClassLibrary\obj\Debug\ClassLibrary.csprojAssemblyReference.cache
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\ClassLibrary\obj\Debug\ClassLibrary.pdb

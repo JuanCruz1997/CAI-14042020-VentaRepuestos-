@@ -1,0 +1,10 @@
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\App Venta Repuestos\bin\Debug\App Venta Repuestos.exe.config
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\App Venta Repuestos\bin\Debug\App Venta Repuestos.exe
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\App Venta Repuestos\bin\Debug\App Venta Repuestos.pdb
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\App Venta Repuestos\bin\Debug\ClassLibrary.dll
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\App Venta Repuestos\bin\Debug\ClassLibrary.pdb
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\App Venta Repuestos\obj\Debug\App Venta Repuestos.csprojAssemblyReference.cache
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\App Venta Repuestos\obj\Debug\App Venta Repuestos.csproj.CoreCompileInputs.cache
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\App Venta Repuestos\obj\Debug\App Venta Repuestos.csproj.CopyComplete
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\App Venta Repuestos\obj\Debug\App Venta Repuestos.exe
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-14042020-VentaRepuestos-\Venta Repuestos\App Venta Repuestos\obj\Debug\App Venta Repuestos.pdb

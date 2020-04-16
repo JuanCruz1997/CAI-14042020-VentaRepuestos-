@@ -13,6 +13,14 @@ namespace ClassLibrary
         private double _precio;
         private int _stock;
         private Categoria _categoria;
+        public Repuesto(int codigo, string nombre, double precio, int stock, Categoria categoria)
+        {
+            this._codigo = codigo;
+            this._nombre = nombre;
+            this._precio = precio;
+            this._stock = stock;
+            this._categoria = categoria;
+        }
         public int Codigo
         {
             get

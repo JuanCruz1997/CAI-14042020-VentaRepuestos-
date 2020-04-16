@@ -10,12 +10,13 @@ namespace ClassLibrary
     {
         private int _codigo = 0;
         private string _nombre = "";
+        public Categoria(int codigo, string nombre)
+        {
+            this._codigo = codigo;
+            this._nombre = nombre;
+        }
         public int Codigo
         {
-            set
-            {
-                this._codigo = value;
-            }
             get
             {
                 return this._codigo;

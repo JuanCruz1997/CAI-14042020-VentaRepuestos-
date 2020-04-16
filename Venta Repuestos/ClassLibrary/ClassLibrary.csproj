@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categoria.cs" />
+    <Compile Include="ConsolaHelper.cs" />
     <Compile Include="Repuesto.cs" />
+    <Compile Include="Validaciones.cs" />
     <Compile Include="VentaRepuestos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
