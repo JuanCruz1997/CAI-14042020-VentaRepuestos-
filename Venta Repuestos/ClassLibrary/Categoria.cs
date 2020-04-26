@@ -8,12 +8,14 @@ namespace ClassLibrary
 {
     public class Categoria
     {
-        private int _codigo = 0;
-        private string _nombre = "";
+        private int _codigo;
+        private string _nombre;
+        private List<Categoria> _categorias;
         public Categoria(int codigo, string nombre)
         {
             this._codigo = codigo;
             this._nombre = nombre;
+            this._categorias = new List<Categoria>();
         }
         public int Codigo
         {
@@ -31,6 +33,13 @@ namespace ClassLibrary
             get
             {
                 return this._nombre;
+            }
+        }
+        public List<Categoria> GetCategorias
+        {
+            get
+            {
+                return this._categorias;
             }
         }
     }

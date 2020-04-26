@@ -49,13 +49,13 @@ namespace ClassLibrary
                 return c;
             }
         }
-        public static Categoria PedirCategoria(string msg)
+        /*public static Categoria PedirCategoria(string msg)
         {
             int cod = PedirInt("Código de categoría.");
             string n = PedirString("Nombre de categoría.");
             Categoria cat = new Categoria(cod, n);
             return cat;
-        }
+        }*/
         public static bool EsOpcionValida(string input, string opcionesValidas)
         {
             try

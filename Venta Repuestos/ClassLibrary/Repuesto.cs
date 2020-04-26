@@ -13,13 +13,12 @@ namespace ClassLibrary
         private double _precio;
         private int _stock;
         private Categoria _categoria;
-        public Repuesto(int codigo, string nombre, double precio, int stock, Categoria categoria)
+        public Repuesto(int codigo, string nombre, double precio, int stock)
         {
             this._codigo = codigo;
             this._nombre = nombre;
             this._precio = precio;
             this._stock = stock;
-            this._categoria = categoria;
         }
         public int Codigo
         {
@@ -74,7 +73,7 @@ namespace ClassLibrary
         }
         public override string ToString()
         {
-            return "["+_codigo+"]" + _nombre;
+            return "Categoría: " + this._categoria.Nombre + "[" + this._codigo + "] - " + _nombre + " || Stock: " + this._stock + " $" + this._precio;
         }
     }
 }

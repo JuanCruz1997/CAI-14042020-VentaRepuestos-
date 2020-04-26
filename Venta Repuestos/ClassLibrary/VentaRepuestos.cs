@@ -8,13 +8,14 @@ namespace ClassLibrary
 {
     public class VentaRepuestos
     {
-        private List<Repuesto> _listaProductos = new List<Repuesto>();
-        private string _nombreComercio = "";
-        private string _direccion = "";
+        private List<Repuesto> _listaProductos;
+        private string _nombreComercio;
+        private string _direccion;
         public VentaRepuestos(string nombre, string direccion)
         {
             this._nombreComercio = nombre;
             this._direccion = direccion;
+            this._listaProductos = new List<Repuesto>();
         }
         public List<Repuesto> ListaProductos
         {
@@ -48,7 +49,8 @@ namespace ClassLibrary
 
         public void AgregarRepuesto(Repuesto rep)
         {
-            foreach(Repuesto r in _listaProductos)
+            //int codCat = ConsolaHelper.PedirInt("Código de categoría:");
+            foreach (Repuesto r in _listaProductos)
             {
                 if (r.Codigo == rep.Codigo)
                 {
@@ -66,6 +68,7 @@ namespace ClassLibrary
                 {
                     _listaProductos.Remove(r);
                     existe = true;
+                    break;
                 }
             }
             if (!existe)
@@ -105,7 +108,14 @@ namespace ClassLibrary
             {
                 if (r.Codigo == codigo)
                 {
-                    r.Stock = r.Stock - cantidadAQuitar;
+                    if (r.Stock > cantidadAQuitar)
+                    {
+                        r.Stock = r.Stock - cantidadAQuitar;
+                    }
+                    else
+                    {
+                        throw new Exception("El valor ingresado es mayor que el stock actual.");
+                    }
                 }
             }
         }
@@ -119,7 +129,14 @@ namespace ClassLibrary
                     lista.Add(r);
                 }
             }
-            return lista;
+            if (lista.Count != 0)
+            {
+                return lista;
+            }
+            else
+            {
+                throw new Exception("La categoría ingresada no existe.");
+            }
         }
     }
 }
