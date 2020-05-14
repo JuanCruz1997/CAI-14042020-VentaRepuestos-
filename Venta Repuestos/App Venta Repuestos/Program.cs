@@ -103,8 +103,9 @@ namespace App_Venta_Repuestos
                 string n = ConsolaHelper.PedirString("Nombre de repuesto.");
                 double p = ConsolaHelper.PedirDouble("Precio.");
                 int s = ConsolaHelper.PedirInt("Stock.");
+                int codCat = ConsolaHelper.PedirInt("Elija categoría:\n" + venta.GetCategorias.ToString());
                 Repuesto nuevoRepuesto = new Repuesto(cod, n, p, s);
-                venta.AgregarRepuesto(nuevoRepuesto);
+                venta.AgregarRepuesto(nuevoRepuesto, codCat);
                 Console.WriteLine("Se ha agregado el repuesto.");
             }catch(Exception ex)
             {

@@ -11,11 +11,16 @@ namespace ClassLibrary
         private List<Repuesto> _listaProductos;
         private string _nombreComercio;
         private string _direccion;
+        private List<Categoria> _categorias;
         public VentaRepuestos(string nombre, string direccion)
         {
             this._nombreComercio = nombre;
             this._direccion = direccion;
             this._listaProductos = new List<Repuesto>();
+            this._categorias = new List<Categoria>();
+            _categorias.Add(new Categoria(1, "Autos"));
+            _categorias.Add(new Categoria(2, "Motos"));
+            _categorias.Add(new Categoria(3, "Camiones"));
         }
         public List<Repuesto> ListaProductos
         {
@@ -46,10 +51,15 @@ namespace ClassLibrary
                 return this._direccion;
             }
         }
-
-        public void AgregarRepuesto(Repuesto rep)
+        public List<Categoria> GetCategorias
         {
-            //int codCat = ConsolaHelper.PedirInt("Código de categoría:");
+            get
+            {
+                return this._categorias;
+            }
+        }
+        public void AgregarRepuesto(Repuesto rep,int codigoCategoria)
+        {
             foreach (Repuesto r in _listaProductos)
             {
                 if (r.Codigo == rep.Codigo)
@@ -57,7 +67,21 @@ namespace ClassLibrary
                     throw new Exception("El repuesto ingresado ya existe.");
                 }
             }
-            _listaProductos.Add(rep);
+            foreach(Categoria c in this._categorias)
+            {
+                if (codigoCategoria == c.Codigo)
+                {
+                    rep.Categoria = c;
+                }
+            }
+            if (rep.Categoria != null)
+            {
+                _listaProductos.Add(rep);
+            }
+            else
+            {
+                throw new Exception("No existe la categoría ingresada.");
+            }
         }
         public void QuitarRepuesto(int codigo)
         {
@@ -135,7 +159,7 @@ namespace ClassLibrary
             }
             else
             {
-                throw new Exception("La categoría ingresada no existe.");
+                throw new Exception("No existen ítems para esa categoría.");
             }
         }
     }
